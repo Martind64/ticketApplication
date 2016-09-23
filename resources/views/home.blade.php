@@ -1,23 +1,15 @@
-<html>
-
-<head>
-<!-- Extends master template -->
 @extends('master')
-@section('title', 'home')
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</head>
+@section('title', 'Home')
 @section('content')
-<body>
 	<div class="container">
-		<div class="content">
-			<div class="title">Home Page</div>
-			<div class="quote">Our Home page!</div> 
+		<div class="row banner">
+			<div class="col-md-12">
+				<h1 class="text-center margin-top-100 editContent">Hello there</h1>
+				<h3 class="text-center margin-top-100 editContent">What's up</h3>
+				<div class="text-center">
+					<img src="http://learninglaravel.net/img/LearningLaravel5_cover0.png" width="302" height="391" alt="">
+				</div>
+			</div>
 		</div>
 	</div>
-</body>
 @endsection
-</html>

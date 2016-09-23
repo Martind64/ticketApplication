@@ -1,8 +1,6 @@
 <html>
 <head>
-<title>Contact Page</title>
-<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet'\
-type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 <style>
 	body {
 	margin: 0;

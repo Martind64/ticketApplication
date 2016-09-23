@@ -21,8 +21,9 @@ Route::get('/hello', function()
 });
 
 // Route for the contact page
-Route::get('/contact', 'PagesController@contact');
+Route::get('/ticket', 'TicketsController@ticket');
 
 // Route for the contact page
 Route::get('/about', 'PagesController@about');
 
+Route::post('/ticket', 'TicketsController@store');
