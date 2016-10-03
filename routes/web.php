@@ -14,12 +14,6 @@
 //Route for the home page
 Route::get('/', 'PagesController@home');
 
-// ROUTE FOR THE HELLO VIEW
-Route::get('/hello', function()
-{
-	return view('hello');
-});
-
 // Route for the contact page
 Route::get('/ticket', 'TicketsController@ticket');
 
