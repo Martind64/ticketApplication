@@ -27,3 +27,13 @@ Route::get('/ticket', 'TicketsController@ticket');
 Route::get('/about', 'PagesController@about');
 
 Route::post('/ticket', 'TicketsController@store');
+
+Route::get('/tickets', 'TicketsController@index');
+
+Route::get('/ticket/{id}', 'TicketsController@show');
+
+Route::get('/ticket/{id}/edit', 'TicketsController@edit');
+
+Route::post('/ticket/{id}/edit', 'TicketsController@update');
+
+Route::post('/ticket/{id}/delete', 'TicketsController@destroy');
