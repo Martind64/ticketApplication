@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\TicketFormRequest;
 use App\Ticket;
+use Illuminate\Support\Facades\Mail;
 
 use App\Http\Requests;
 
@@ -26,6 +27,15 @@ class TicketsController extends Controller
 
 		$ticket->save();
 
+		$data = array('ticket' => $slug);
+
+		Mail::send('emails.ticket', $data, function($message)
+		{
+			$message->from('devdelfs@gmail.com', 'The title?');
+
+			$message->to('devdelfs@gmail.com')->subject('there is a new ticket');
+		});
+
 		return redirect('/ticket')->with('status', 'Your ticket has been created! Its unique id is:'.$slug );
 	}
 
@@ -39,7 +49,12 @@ class TicketsController extends Controller
 	{
 		$ticket = Ticket::whereId($id)->firstOrFail();
 
-		return view('tickets.show', ['ticket' => $ticket]);
+		$comments = $ticket->comments()->get();
+
+		return view('tickets.show', [
+			'ticket' => $ticket,
+			'comments' => $comments,
+			]);
 	}
 
 	public function edit($id)

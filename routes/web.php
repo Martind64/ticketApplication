@@ -31,3 +31,5 @@ Route::get('/ticket/{id}/edit', 'TicketsController@edit');
 Route::post('/ticket/{id}/edit', 'TicketsController@update');
 
 Route::post('/ticket/{id}/delete', 'TicketsController@destroy');
+
+Route::post('/comment', 'CommentsController@newComment');
