@@ -45,8 +45,8 @@
 
 		@if(session('status'))
 			<div class="alert alert-success">
-			{{ session('status') }}
-		</div>
+				{{ session('status') }}
+			</div>
 		@endif
 		
 		<input type="hidden" name="_token" value="{!! csrf_token() !!}">
@@ -54,10 +54,10 @@
 		
 		<fieldset>
 			<legend>Reply</legend>
+			
 			<div class="form-group">
-					<div class="col-lg-12">
-					<textarea class="form-control" rows="3" id="content"\
-					name="content"></textarea>
+				<div class="col-lg-12">
+					<textarea class="form-control" rows="3" id="content" name="content"></textarea>
 				</div>
 			</div>
 
